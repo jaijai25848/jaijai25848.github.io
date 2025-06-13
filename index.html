@@ -4,48 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jireh Faith Ilogon - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">My Portfolio</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about-me"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="#personal-details"><i class="fas fa-address-card"></i> Personal Details</a></li>
+                <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="overlay"></div>
+
     <header class="hero-section">
-        <div class="container">
+        <div class="container hero-content">
+            <img src="JAI.jpg" alt="Profile Picture" class="profile-image">
             <h1>Jireh Faith Ilogon</h1>
             <p class="tagline">Aspiring Software Developer | Creative Problem Solver</p>
         </div>
     </header>
 
     <main>
-        <section id="about-me" class="container">
+        <section id="about-me" class="container card">
             <h2>About Me</h2>
-            <p>Hello! My name is Jireh Faith Ilogon, and I am a passionate and dedicated individual with a strong drive to <strong>develop innovative solutions and contribute to impactful projects</strong>. My journey in <strong>[Your Field/Area of Study, e.g., Computer Science]</strong> has equipped me with a solid foundation in <strong>web development, data structures, and problem-solving</strong>. I am continuously eager to expand my knowledge and skill set. I thrive in environments that encourage learning, collaboration, and creative problem-solving. My approach is detail-oriented and results-driven, always aiming to deliver high-quality work and make a meaningful contribution.</p>
+            <p>My journey into the world of technology began with a spark of curiosity and a deep-seated passion for problem-solving. As a dedicated **Bachelor of Science in Information Technology (BSIT) student**, I've been captivated by the boundless possibilities that coding and innovative solutions offer. My academic path has been a thrilling exploration, equipping me with a robust foundation in **web development, complex data structures, and the art of computational thinking**.
+
+            Every line of code I write and every challenge I tackle reinforces my ambition: to evolve into a **successful programmer** who doesn't just build, but innovates and creates impactful digital experiences. I thrive on expanding my knowledge and embracing new technologies, seeing each new concept as another tool to craft remarkable solutions.
+
+            I believe true success in programming comes from a blend of dedication, collaboration, and meticulous attention to detail. My approach is always results-driven, aiming to contribute meaningfully to projects and bring creative ideas to life. I am continuously eager to learn, adapt, and collaborate, confident that through persistent effort and a passion for technology, I can achieve my goal of becoming a truly successful and contributing programmer.</p>
         </section>
 
-        <section id="personal-details" class="container">
+        <section id="personal-details" class="container card">
             <h2>Personal Details</h2>
-            <ul>
-                <li><strong>Email:</strong> your.email@example.com</li>
-                <li><strong>Phone:</strong> +63 9XX XXX XXXX</li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
-                <li><strong>Location:</strong> Cebu City, Central Visayas, Philippines</li>
+            <ul class="contact-list">
+                <li><strong>Email:</strong> <a href="mailto:jireh.ilogon@example.com">jireh.ilogon@example.com</a></li>
+                <li><strong>Phone:</strong> 09555370963</li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jirehilogon" target="_blank">linkedin.com/in/jirehilogon</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/jaijai25848" target="_blank">github.com/jaijai25848</a></li>
+                <li><strong>Location:</strong> Maanyag, Tomas Oppus, So.Leyte</li>
             </ul>
         </section>
 
-        <section id="skills" class="container">
+        <section id="skills" class="container card">
             <h2>Skills</h2>
             <h3>Technical Skills</h3>
-            <ul class="skills-list">
+            <ul class="skills-grid">
                 <li><strong>Programming Languages:</strong> Python, Java, JavaScript, C++</li>
                 <li><strong>Web Technologies:</strong> HTML5, CSS3, React, Node.js, Express.js</li>
                 <li><strong>Databases:</strong> SQL (PostgreSQL, MySQL), MongoDB</li>
                 <li><strong>Version Control:</strong> Git, GitHub</li>
-                <li><strong>Tools & Platforms:</strong> VS Code, Docker, AWS (basic)</li>
             </ul>
 
             <h3>Soft Skills</h3>
-            <ul class="skills-list">
+            <ul class="skills-list-soft">
                 <li>Problem-Solving</li>
                 <li>Communication</li>
                 <li>Teamwork & Collaboration</li>
@@ -55,56 +78,57 @@
             </ul>
         </section>
 
-        <section id="education" class="container">
+        <section id="education" class="container card">
             <h2>Education</h2>
             <div class="education-item">
-                <h3>[Your Degree/Program Name]</h3>
-                <p><strong>[Your University/Institution Name]</strong> | [Start Date] – [End Date (or Expected)]</p>
+                <h3>Bachelor of Science in Information Technology</h3>
+                <p class="institution-name"><strong>Southern Leyte State University</strong> | August 2021 – May 2025 (Expected)</p>
                 <ul>
                     <li><em>Relevant Coursework:</em> Data Structures and Algorithms, Object-Oriented Programming, Web Development, Database Management Systems.</li>
-                    <li><em>Honors/Awards:</em> Dean's List (e.g., 2023, 2024), Academic Scholarship Recipient.</li>
                 </ul>
             </div>
             <div class="education-item">
-                <h3>[Previous Education - e.g., Senior High School - STEM Strand]</h3>
-                <p><strong>[School Name]</strong> | [Start Date] – [End Date]</p>
+                <h3>Senior High School - TVL Strand</h3>
+                <p class="institution-name"><strong>DR. Rath Memorial Institute Foundation Inc.</strong> | June 2019 – May 2021</p>
                 <ul>
-                    <li><em>Achievements:</em> [e.g., Graduated with Honors, Participated in Science Fair].</li>
+                    <li><em>Achievements:</em> Participated in Regional Science Fair.</li>
                 </ul>
             </div>
         </section>
 
-        <section id="projects" class="container">
+        <section id="projects" class="container card">
             <h2>Projects</h2>
             <div class="project-item">
-                <h3>Project Title 1: [e.g., E-commerce Platform Redesign]</h3>
-                <p class="project-description">A responsive web application designed to simplify online shopping, featuring user authentication, product catalog, and secure payment processing.</p>
-                <p class="project-tech"><strong>Technologies Used:</strong> React, Node.js, Express.js, MongoDB, CSS3</p>
+                <h3>BARGO: An Online Bartering Platform</h3>
+                <p class="project-description">A web application designed to facilitate secure and efficient online bartering for goods and services, promoting sustainable exchange.</p>
+                <p class="project-tech"><strong>Technologies Used:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
                 <ul class="project-contributions">
-                    <li>Developed the full-stack user authentication system with JWT.</li>
-                    <li>Implemented a dynamic product filtering and search functionality.</li>
-                    <li>Designed and integrated the responsive front-end UI for seamless user experience.</li>
+                    <li>Developed the core user interface for listing and Browse items.</li>
+                    <li>Implemented a messaging system for user communication and negotiation.</li>
+                    <li>Designed the database schema for item management and user profiles.</li>
                 </ul>
-                <p class="project-links">
-                    <a href="https://github.com/yourusername/project1" target="_blank">GitHub Repo</a> |
-                    <a href="https://yourdemolink.com/project1" target="_blank">Live Demo</a> (if applicable)
-                </p>
+                <div class="project-links">
+                    <a href="https://github.com/jaijai25848/felicilda.git" target="_blank">GitHub Repo</a>
+                    <a href="https://yourdemolink.com/BARGO" target="_blank">Live Demo</a> (if applicable)
+                </div>
             </div>
 
             <div class="project-item">
-                <h3>Project Title 2: [e.g., Data Analysis Dashboard]</h3>
-                <p class="project-description">An interactive data visualization dashboard built to analyze public transportation data trends across Cebu City.</p>
-                <p class="project-tech"><strong>Technologies Used:</strong> Python, Pandas, Matplotlib, Dash, HTML</p>
+                <h3>Student Uniform Management System</h3>
+                <p class="project-description">A web-based system designed to streamline the process of uniform ordering, inventory management, and distribution for educational institutions.</p>
+                <p class="project-tech"><strong>Technologies Used:</strong> PHP, MySQL, HTML, CSS, JavaScript (or specify relevant technologies if different)</p>
                 <ul class="project-contributions">
-                    <li>Processed and cleaned large datasets using Pandas for accurate insights.</li>
-                    <li>Created various interactive charts and graphs to visualize key metrics.</li>
-                    <li>Deployed the dashboard for public access on a local server.</li>
+                    <li>Developed user interfaces for students to place uniform orders and track their status.</li>
+                    <li>Implemented an administrative dashboard for managing uniform inventory, sizes, and stock levels.</li>
+                    <li>Designed and managed the database for student, uniform, and order information.</li>
+                    <li>Integrated reporting features for inventory levels and sales data.</li>
                 </ul>
-                <p class="project-links">
-                    <a href="https://github.com/yourusername/project2" target="_blank">GitHub Repo</a>
-                </p>
+                <div class="project-links">
+                    <a href="https://github.com/jirehilogon/uniform-management-system-repo" target="_blank">GitHub Repo</a>
+                    <a href="https://yourdemolink.com/uniform-system" target="_blank">Live Demo</a> (if applicable)
+                </div>
             </div>
-            </section>
+        </section>
     </main>
 
     <footer>
@@ -112,6 +136,33 @@
             <p>&copy; 2025 Jireh Faith Ilogon. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const overlay = document.querySelector('.overlay');
+
+            function toggleMenu() {
+                navLinks.classList.toggle('open');
+                overlay.classList.toggle('active');
+                document.body.classList.toggle('no-scroll'); // Prevent scrolling when menu is open
+            }
+
+            menuToggle.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu); // Close menu when overlay is clicked
+
+            // Close menu when a nav link is clicked (for smooth scroll and then close)
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    // Check if the menu is open and it's a mobile view
+                    if (navLinks.classList.contains('open') && window.innerWidth <= 768) {
+                        toggleMenu();
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
