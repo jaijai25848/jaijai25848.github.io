@@ -1,0 +1,309 @@
+/* General Styling & Bumblebee Theme Variables */
+:root {
+    --bumble-yellow: #FFD700;   /* A bright, golden yellow */
+    --bumble-dark: #333333;     /* A deep charcoal gray for text and primary elements */
+    --bumble-light: #F8F8F8;    /* Off-white for section backgrounds */
+    --bumble-accent-bg: #EAEAEA; /* Slightly darker light for alternating sections/subtle contrast */
+    --text-color: #555555;      /* Softer gray for general text */
+    --header-bg: #222222;       /* Darker background for the hero section */
+}
+
+body {
+    font-family: 'Lato', sans-serif; /* A clean, readable sans-serif font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bumble-light);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header/Hero Section */
+.hero-section {
+    background-color: var(--header-bg);
+    color: var(--bumble-light);
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 5px solid var(--bumble-yellow); /* Bumblebee accent line */
+}
+
+.hero-section h1 {
+    font-family: 'Montserrat', sans-serif; /* More prominent font for name */
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: var(--bumble-yellow); /* Name in golden yellow */
+}
+
+.hero-section .tagline {
+    font-size: 1.4em;
+    font-weight: 300;
+    color: var(--bumble-light);
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+    margin-bottom: 20px;
+    background-color: #FFFFFF; /* Pure white for content blocks */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Alternating background for sections (optional, uncomment to enable) */
+/*
+section:nth-of-type(even) {
+    background-color: var(--bumble-accent-bg);
+}
+*/
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: var(--bumble-dark); /* Main headings in dark color */
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after { /* Underline effect for H2 */
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background-color: var(--bumble-yellow); /* Yellow underline */
+    border-radius: 2px;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    color: var(--bumble-yellow); /* Sub-headings in golden yellow */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs and Lists */
+p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+ul li::before { /* Custom bullet point (subtle yellow dot) */
+    content: '\2022'; /* Unicode for a solid circle */
+    color: var(--bumble-yellow);
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: inherit; /* Align with text */
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skills-list li {
+    background-color: var(--bumble-accent-bg);
+    padding: 10px 15px;
+    border-left: 3px solid var(--bumble-yellow); /* Subtle accent */
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.skills-list li::before { /* Hide default bullet for skill items */
+    content: none;
+}
+
+
+/* Education & Project Items */
+.education-item,
+.project-item {
+    margin-bottom: 40px;
+    padding: 25px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: var(--bumble-light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.education-item:hover,
+.project-item:hover {
+    border-color: var(--bumble-yellow);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h3,
+.project-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--bumble-dark); /* Titles in dark color */
+    font-size: 1.4em;
+    position: relative;
+    padding-left: 20px; /* Space for the yellow dot */
+}
+
+.education-item h3::before,
+.project-item h3::before { /* Custom bullet for item titles */
+    content: '\2022'; /* Unicode for a solid circle */
+    color: var(--bumble-yellow);
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.project-description {
+    font-style: italic;
+    color: var(--text-color);
+}
+
+.project-tech {
+    font-weight: 700;
+    color: var(--bumble-dark);
+    margin-top: 10px;
+}
+
+.project-contributions li {
+    font-size: 1em;
+    margin-bottom: 5px;
+    padding-left: 20px; /* Align with other list items */
+}
+
+.project-links a {
+    display: inline-block;
+    background-color: var(--bumble-yellow);
+    color: var(--bumble-dark);
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-links a:hover {
+    background-color: var(--bumble-dark);
+    color: var(--bumble-yellow);
+    text-decoration: none;
+}
+
+
+/* Links in general */
+a {
+    color: var(--bumble-yellow);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--bumble-dark);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--header-bg);
+    color: var(--bumble-light);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section .tagline {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    ul li {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section .tagline {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    p, ul li {
+        font-size: 1em;
+    }
+
+    .project-links a {
+        display: block; /* Stack links vertically */
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
